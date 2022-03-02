@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class Main {
+  
+  
+  public static void main(String args[]){
+    
+    Scanner sc = new Scanner(System.in);
+    int X = sc.nextInt();
+    int Y = sc.nextInt();
+    int Z = sc.nextInt();
+    int max;
+    if (X == Y && X == Z && Y == Z){
+        System.out.println(10000+X*1000);
+    }
+    else if ((X == Y)){
+        System.out.println(1000+X*100);
+        
+    }
+    else if ((X == Z)) {
+        System.out.println(1000+X*100);
+    }
+    else if ((Y == Z)) {
+        System.out.println(1000+Y*100);
+    }
+    else if (X != Y && X != Z && Y != Z){
+        if ((Y < X && Z < X) || (Z < X && Y < X)) {
+            System.out.println(X*100);
+        }
+        else if ((X < Y && Z < Y) || (Z < Y && X < Y)) {
+            System.out.println(Y*100);
+        }
+        else if ((X < Z && Y < Z) || (Y < Z && Y < Z)) {
+            System.out.println(Z*100);
+        }
+        
+    }
+  }
+}
