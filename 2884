@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+  
+  
+  public static void main(String args[]){
+    
+    Scanner sc = new Scanner(System.in);
+    int X = sc.nextInt();
+    int Y = sc.nextInt();
+    int M;
+    if (Y < 45) {
+        M = 45 - Y;
+        Y = 60 - M;
+        X = X - 1;
+    }
+    else {
+        Y = Y - 45;
+    }
+    if (X < 0) {
+        X = 23;
+    }
+    System.out.println(X+" "+Y);
+  }
+}
